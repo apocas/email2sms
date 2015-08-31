@@ -1,0 +1,23 @@
+{
+  "split": ";",
+  "authorized": [
+    "johndoe@mydomain.com",
+    "@myotherdomain.com"
+  ],
+  "from": "Company",
+  "email": {
+    "user": "status@yourcompanydomain.com",
+    "password": "emailpassword",
+    "host": "mail.yourcompanydomain.com",
+    "port": 993,
+    "tls": true,
+    "tlsOptions": {
+      "rejectUnauthorized": false
+    }
+  },
+  "infobip": {
+    "url": "",
+    "username": "",
+    "password": ""
+  }
+}
