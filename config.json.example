@@ -4,6 +4,9 @@
     "johndoe@mydomain.com",
     "@myotherdomain.com"
   ],
+  "ignore": [
+    "ignore msg containing this text"
+  ],
   "from": "Company",
   "email": {
     "user": "status@yourcompanydomain.com",

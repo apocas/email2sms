@@ -17,13 +17,26 @@ var handler = function(mail) {
 
   if (found === true) {
     var data = mail.subject.split(config.split);
-    if (data.length == 2) {
+    if (data.length == 2 && ignored(data[1]) === false) {
       sendSMS(data[0], data[1]);
+    } else {
+      console.log('SMS invalid or ignored: ' + data);
     }
   }
 };
 
 postman.start(handler);
+
+function ignored(message) {
+  for (var i = 0; i < config.ignore.length; i++) {
+    var ignore = config.ignore[i].toLowerCase();
+    if (message.toLowerCase().indexOf(ignore) > -1) {
+      return true;
+    }
+  }
+
+  return false;
+}
 
 function sendSMS(number, message) {
   var serverOptions = {
