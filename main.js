@@ -39,6 +39,9 @@ function ignored(message) {
 }
 
 function sendSMS(number, message) {
+  console.log('-------------------');
+  console.log(number);
+  console.log(message);
   var serverOptions = {
     uri: 'http://' + config.infobip.username +
       ':' + config.infobip.password + '@' + config.infobip.url,
