@@ -20,7 +20,7 @@ var handler = function(mail) {
     if (data.length == 2 && ignored(data[1]) === false) {
       sendSMS(data[0], data[1]);
     } else {
-      console.log('SMS invalid or ignored: ' + data);
+      console.log('SMS invalid or ignored: ' + mail.subject);
     }
   }
 };
